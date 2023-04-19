@@ -1,4 +1,5 @@
-import Home from "./screens/Home";
+import Home from './screens/Home'
+
 function App() {}
 
-export default App;
+export default App
