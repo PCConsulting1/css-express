@@ -1,5 +1,7 @@
 import Home from './screens/Home'
 
-function App() {}
+function App() {
+  return <Home />
+}
 
 export default App
