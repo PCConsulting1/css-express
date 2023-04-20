@@ -1,3 +1,14 @@
+.ad{
+ max-width: 600px;
+}
+
+.ad-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .banner{
     width: 100vw;
     display: flex;
@@ -5,21 +16,72 @@
     background-color: var(--primary);
     color: white;
 }
+.banner a{
+    color: white;
+    text-decoration: underline;
+    margin-left: 5px;
+    font-weight: 500;
+}
+.banner a:hover{
+    filter: brightness(95%)
+}
 
 .banner-logo{
     width: 100vw;
     display: flex;
     justify-content: start;
+    padding-left: 10px;
 }
 
-.banner-link{
+.card{
+    border-top: 10px solid var(--primary);
+    border-radius: 10px;
+    padding: 5px;
+}
+.card button{
+    margin: 10px;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card-image{
+    max-width: 100%;
+    height: auto;
+}
+.card-image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.spacer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     color: white;
-    text-decoration: underline;
-    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    height: 480px;
+    align-items: center;
+}
+.testimonial{
+    max-width: 25%;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.75);
+}
+.testimonials-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
 }
 
-.banner-link:hover{
-    color: lightgrey;
+.text-lg{
+    font-size: 1.5rem;
+}
+
+.text-centered{
+    text-align: center;
 }
 
 .welcome-container{
@@ -30,79 +92,10 @@
     height: 500;
 }
 
-.spacer-alt{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    height: 480px;
-    align-items: center;
-}
-
-.image-body{
-    font-size:x-large;
-}
-
-.image-heading{
-    font-size: 2.5rem;
-}
-
-.card-container{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    text-align: center;
-}
-
-.card{
-    border-top: 10px solid var(--primary);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.card-image-container{
-    display: flex;
-    justify-content: center;
-}
-
-.card button{
-    margin: 10px;
-}
-
-.card-image{
-    max-width: 100%;
-    height: auto;
-}
-
-.testimonials-container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    
-}
-
-.testimonials-section{
-    text-align: center;
-}
-
-.ad{
-    border-color: var(--primary);
-}
-
 @media (min-width: 481px) {
-    .spacer-alt{ max-width: 45%}
+    .spacer{ max-width: 45%}
 }
 
 @media screen and (max-width: 480px) {
-    .spacer-alt{ width: 100vw; margin: 0}
+    .spacer{ width: 100vw; margin: 0}
 }

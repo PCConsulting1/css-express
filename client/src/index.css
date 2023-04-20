@@ -16,26 +16,28 @@
   --primary: #4361ee;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 1280px;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
 
 button {
   border-radius: 8px;
@@ -60,9 +62,6 @@ button:active{
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
   }
   button {
     background-color: var(--primary);

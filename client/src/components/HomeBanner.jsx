@@ -3,11 +3,8 @@ export default function () {
   return (
     <>
       <div className="banner">
-        <p>
-          Do your top choice college's require <span>CSS Profile</span>{' '}
-          application?
-        </p>
-        <a className="banner-link" href="#">
+        <p>Do your top choice college's require CSS Profile application?</p>
+        <a href="#">
           <p>Find out</p>
         </a>
       </div>
