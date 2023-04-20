@@ -87,6 +87,12 @@
 .testimonials-container{
     display: flex;
     justify-content: space-evenly;
+    width: 100vw;
+    
+}
+
+.testimonials-section{
+    text-align: center;
 }
 
 .ad{
