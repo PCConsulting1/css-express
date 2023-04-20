@@ -1,21 +1,14 @@
-import './Home.css'
-import picture from '../assets/moneyPic.jpg'
+import HomeBanner from '../components/HomeBanner'
+import HomeImage from '../components/HomeImage'
+import HomeAdCard from '../components/HomeAdCard'
+import Testimonials from '../components/Testimonials'
 export default function Home() {
   return (
     <>
-      <div className="banner">
-        <p>
-          Do your top choice college's require <span>CSS Profile</span>{' '}
-          application
-        </p>
-      </div>
-      <div className="banner-logo">
-        <h3>CSS Profile Express</h3>
-      </div>
-      <div className="welcome-container">
-        {/* <div className="spacer">Darken Whole image</div> */}
-        <div className="spacer-alt">Darken Only Necessary</div>
-      </div>
+      <HomeBanner />
+      <HomeImage />
+      <HomeAdCard />
+      <Testimonials />
     </>
   )
 }

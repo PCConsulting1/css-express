@@ -12,6 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --primary: #4361ee;
 }
 
 a {
@@ -37,22 +39,22 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: filter 0.25s;
+  width: fit-content;
 }
 button:hover {
-  border-color: #646cff;
+  filter: brightness(85%)
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:active{
+  filter: brightness(70%);
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -63,6 +65,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--primary);
+    color: white;
   }
 }
