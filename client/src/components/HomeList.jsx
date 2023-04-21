@@ -1,6 +1,6 @@
 export default function () {
   return (
-    <div>
+    <div className="list-container">
       <h2>
         CSS Profile online - Important details about filing the CSS for you
       </h2>
