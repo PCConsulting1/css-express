@@ -6,7 +6,6 @@ export default function () {
       <div>
         <CompanyInfo />
       </div>
-      {/* <div style={{ flexGrow: 1 }} /> */}
       <div>
         <ContactForm />
       </div>

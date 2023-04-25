@@ -1,73 +1,51 @@
-import { useState } from 'react'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
 import {
   validateName,
   validateEmail,
   validatePhone,
 } from '../functions/validate'
 
+const SERVICE_ID = 'service_wh2pn4h'
+const PUBLIC_KEY = 'jfsrsbTBUoAqFCd_e'
+const TEMPLATE_ID = 'contact_form'
+
 export default function () {
-  const [state, setState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-  })
+  const form = useRef()
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    // check form validity before sending
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.status)
+      })
   }
 
   return (
     <>
       <h3 className="text-centered">Contact Us</h3>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="column">
           <label>
             First Name*
-            <input
-              id="firstName"
-              type="text"
-              value={state.firstName}
-              onChange={(e) => {
-                validateName(e.target.value) &&
-                  setState({ firstName: e.target.value })
-              }}
-            />
+            <input type="text" name="first_name" required />
           </label>
           <label>
             Last Name*
-            <input
-              type="text"
-              value={state.lastName}
-              onChange={(e) => {
-                validateName(e.target.value) &&
-                  setState({ lastName: e.target.value })
-              }}
-            />
+            <input type="text" name="last_name" required />
           </label>
         </div>
         <div className="column">
           <label>
             Email*
-            <input
-              type="text"
-              value={state.email}
-              onChange={(e) => {
-                validateEmail(e.target.value) &&
-                  setState({ email: e.target.value })
-              }}
-            />
+            <input type="text" name="user_email" required />
           </label>
           <label>
             Phone*
-            <input
-              type="text"
-              value={state.phone}
-              onChange={(e) => {
-                validatePhone(e.target.value) &&
-                  setState({ phone: e.target.value })
-              }}
-            />
+            <input type="text" name="user_phone" required />
           </label>
         </div>
         <button type="submit" style={{ backgroundColor: 'green', margin: 5 }}>

@@ -84,6 +84,8 @@
     border-bottom: 2px solid black;
 }
 
+
+
 .list-container{
     padding: 20px
 }
@@ -183,5 +185,11 @@
 }
 
 @media screen and (max-width: 480px) {
-    .spacer{ width: calc(100% - 20px); margin: 0}
+    .spacer{ width: 100%; margin: 0}
+    .footer{
+        font-size: 0.75rem;
+    }
+    form input{
+        max-width: 150px; 
+    }
 }
