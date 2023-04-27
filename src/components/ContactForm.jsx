@@ -2,6 +2,10 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { validateEmail, validatePhone } from '../functions/validate'
 
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
+
 export default function ({ submitted }) {
   const [errors, setErrors] = useState({
     email: false,
@@ -28,15 +32,15 @@ export default function ({ submitted }) {
         phone: false,
         form: false,
       })
-      // emailjs
-      //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      //   .then(() => {
-      //     form.reset()
-      //     submitted(true)
-      //   })
-      //   .catch((err) => {
-      //     setErrors({ form: true })
-      //   })
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        .then(() => {
+          form.reset()
+          submitted(true)
+        })
+        .catch((err) => {
+          setErrors({ form: true })
+        })
       setErrors({ form: true })
     }
   }
