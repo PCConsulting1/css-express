@@ -1,27 +1,44 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { validateEmail, validatePhone } from '../functions/validate'
 
-import {
-  validateName,
-  validateEmail,
-  validatePhone,
-} from '../functions/validate'
+export default function ({ submitted }) {
+  const [errors, setErrors] = useState({
+    email: false,
+    phone: false,
+    form: false,
+  })
 
-const SERVICE_ID = 'service_wh2pn4h'
-const PUBLIC_KEY = 'jfsrsbTBUoAqFCd_e'
-const TEMPLATE_ID = 'contact_form'
-
-export default function () {
   const form = useRef()
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    const emailValue = event.currentTarget.elements[2].value
+    const phoneValue = event.currentTarget.elements[3].value
     // check form validity before sending
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      .then((result) => {
-        console.log(result.status)
+
+    if (validateEmail(emailValue) || validatePhone(phoneValue)) {
+      setErrors({
+        email: validateEmail(emailValue),
+        phone: validatePhone(phoneValue),
       })
+    } else {
+      setErrors({
+        email: false,
+        phone: false,
+        form: false,
+      })
+      // emailjs
+      //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      //   .then(() => {
+      //     form.reset()
+      //     submitted(true)
+      //   })
+      //   .catch((err) => {
+      //     setErrors({ form: true })
+      //   })
+      setErrors({ form: true })
+    }
   }
 
   return (
@@ -41,16 +58,33 @@ export default function () {
         <div className="column">
           <label>
             Email*
-            <input type="text" name="user_email" required />
+            <input type="email" name="user_email" required />
           </label>
+          {errors.email && (
+            <p className="error">Please enter a valid email address</p>
+          )}
           <label>
             Phone*
-            <input type="text" name="user_phone" required />
+            <input type="tel" name="user_phone" required />
           </label>
+          {errors.phone && (
+            <p className="error">Please enter a valid phone number</p>
+          )}
         </div>
-        <button type="submit" style={{ backgroundColor: 'green', margin: 5 }}>
-          Submit
-        </button>
+        {errors.form ? (
+          <p className="error text-centered">
+            Something went wrong, please try again later
+          </p>
+        ) : (
+          <div className="center-item">
+            <button
+              type="submit"
+              style={{ backgroundColor: 'green', margin: 5 }}
+            >
+              Submit
+            </button>
+          </div>
+        )}
       </form>
     </>
   )

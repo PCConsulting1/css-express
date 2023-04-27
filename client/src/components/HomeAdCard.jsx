@@ -1,6 +1,6 @@
 import image from '../assets/deskGirlImg.jpg'
 import '../styles/Home.styles.css'
-export default function () {
+export default function ({ showModal }) {
   return (
     <div className="ad-container">
       <div>
@@ -12,7 +12,7 @@ export default function () {
             Have a dedicated CSS Profile counselor handle everything from start
             to finish
           </p>
-          <button>Get Started</button>
+          <button onClick={() => showModal(true)}>Get Started</button>
         </div>
         <div className="card-image-container">
           <img

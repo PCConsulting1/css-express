@@ -9,6 +9,18 @@
     align-items: center;
 }
 
+.backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
 .banner{
     width: 100vw;
     display: flex;
@@ -31,7 +43,16 @@
     justify-content: start;
     padding-left: 10px;
 }
-
+.btn-modal{
+    float: right;
+    background: none;
+    color: red;
+    font-weight: 800;
+}
+.center-item{
+    display: flex;
+    justify-content: center;
+}
 .card{
     border-top: 10px solid var(--primary);
     border-radius: 10px;
@@ -61,7 +82,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100;
 }
 
 .footer{
@@ -71,23 +91,33 @@
     background-color: var(--primary);
     color: white;
 }
-.footer input {
+
+form input {
     display: block;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     border: none;
+    border-bottom: 1px solid var(--primary);
     margin-left: 5px;
     padding: 10px;
-   
+    border-left: 5px inset transparent;
 }
-.footer input:focus{
+form input:focus{
     outline: none;
-    border-bottom: 2px solid black;
+    border-left: 5px inset var(--primary);
 }
 
-
+form label{
+    margin-top: 5px;
+}
 
 .list-container{
     padding: 20px
+}
+
+.modal{
+    background-color: white;
+    border-radius: 15px;
+    z-index: 10;
 }
 
 .slide {
@@ -112,7 +142,6 @@
     padding: 10px;
     border: none;
     border-radius: 50%;
-    z-index: 10px;
     cursor: pointer;
     background-color: transparent;
     font-size: 3rem;
@@ -149,6 +178,10 @@
     align-items: center;
    
 }
+
+.success{
+    color: green;
+}
 .testimonial{
     max-width: 25%;
     min-width: 250px;
@@ -182,6 +215,7 @@
 
 @media (min-width: 481px) {
     .spacer{ max-width: 45%}
+    .modal{ width: 45vw; height: 45vh}
 }
 
 @media screen and (max-width: 480px) {
@@ -189,7 +223,9 @@
     .footer{
         font-size: 0.75rem;
     }
-    form input{
+    footer input{
         max-width: 150px; 
     }
+    .modal{ width: 95vw; height: 95vh; border-radius: 0;}
+
 }

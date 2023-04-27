@@ -3,9 +3,14 @@ export default function () {
   return (
     <>
       <div className="banner">
-        <p>
+        <p style={{ margin: '5px' }}>
           Do your top choice college's require CSS Profile application?{' '}
-          <a href="#">Find out</a>
+          <a
+            href="https://profile.collegeboard.org/profile/ppi/participatingInstitutions.aspx"
+            target="_blank"
+          >
+            Find out
+          </a>
         </p>
       </div>
       <div className="banner-logo">
