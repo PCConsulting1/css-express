@@ -40,6 +40,7 @@ export default function ({ submitted }) {
         })
         .catch((err) => {
           setErrors({ form: true })
+          console.log(err)
         })
       setErrors({ form: true })
     }
