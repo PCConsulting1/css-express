@@ -32,17 +32,17 @@ export default function ({ submitted }) {
         phone: false,
         form: false,
       })
-      emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-        .then(() => {
-          form.reset()
-          submitted(true)
-        })
-        .catch((err) => {
-          setErrors({ form: true })
-          console.log(err)
-        })
-      setErrors({ form: true })
+      // emailjs
+      //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      //   .then(() => {
+      //     form.reset()
+      //     submitted(true)
+      //   })
+      //   .catch((err) => {
+      //     setErrors({ form: true })
+      //     console.log(err)
+      //   })
+      // setErrors({ form: true })
     }
   }
 
