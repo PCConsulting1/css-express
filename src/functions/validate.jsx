@@ -9,3 +9,7 @@ export const validatePhone = (phone) => {
     ) === null
   )
 }
+
+export const validateTest = (values, answer) => {
+  return values[0] + values[1] == answer
+}
