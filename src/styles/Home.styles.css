@@ -147,8 +147,7 @@ form label {
 }
 .slider button {
   position: absolute;
-  width: 50px;
-  height: 20px;
+  width: 40px;
   padding: 0px;
   border: none;
   border-radius: 50%;

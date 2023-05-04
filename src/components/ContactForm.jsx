@@ -53,15 +53,15 @@ export default function ({ submitted }) {
         form: false,
       })
       submitted(true)
-      // emailjs
-      //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      //   .then(() => {
-      //     form.reset()
-      //     submitted(true)
-      //   })
-      //   .catch((err) => {
-      //     setErrors({ form: true })
-      //   })
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        .then(() => {
+          form.reset()
+          submitted(true)
+        })
+        .catch((err) => {
+          setErrors({ form: true })
+        })
     }
   }
 
