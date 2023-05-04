@@ -177,6 +177,10 @@ form label {
   right: 2%;
 }
 
+ol li {
+  margin-top: 8px;
+}
+
 .spacer {
   text-align: center;
   display: flex;
@@ -244,8 +248,8 @@ form label {
     max-width: 150px;
   }
   .modal {
-    width: 95vw;
-    height: 95vh;
+    width: 90vw;
+    height: 60vh;
     border-radius: 0;
   }
 }

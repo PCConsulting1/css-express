@@ -4,22 +4,22 @@ export default function () {
     <div className="testimonials-container">
       <TestimonialCard
         color="#7b90f3"
-        name={'Testimonial 1'}
+        name={'March 2023'}
         description={
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis nunc sed id semper risus in. Lacus vestibulum sed arcu non.'
+          'Your company really helped me take the fear and anxiety over the answering those complicated questions the CSS Profile asks of us.'
         }
       />
       <TestimonialCard
-        name={'Testimonial 2'}
+        name={'October 2022'}
         description={
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          'It was a great help to have one of your team members fill out the 3+ hour form for us.'
         }
       />
       <TestimonialCard
         color="#2f44a7"
-        name={'Testimonial 3'}
+        name={'October 2022'}
         description={
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit utaliquam purus sit amet luctus venenatis.'
+          'I didn’t know where to even begin to start answering the difficult CSS Profile questions and what the correct information was for the boxes. Thank you so much for doing this application for us.'
         }
       />
     </div>
