@@ -6,7 +6,7 @@ export default function () {
         color="#7b90f3"
         name={'March 2023'}
         description={
-          'Your company really helped me take the fear and anxiety over the answering those complicated questions the CSS Profile asks of us.'
+          'Your company really helped me take the fear and anxiety over answering those complicated questions the CSS Profile asks of us.'
         }
       />
       <TestimonialCard
