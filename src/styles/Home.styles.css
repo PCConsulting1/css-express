@@ -231,7 +231,7 @@ ol li {
   }
   .modal {
     width: 45vw;
-    height: 45vh;
+    min-height: 45vh;
   }
 }
 

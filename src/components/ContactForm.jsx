@@ -31,7 +31,6 @@ export default function ({ submitted }) {
     const phoneValue = event.currentTarget.elements[4].value
     const testValue = event.currentTarget.elements[5].value
     const honeyPotTwo = event.currentTarget.elements[6].value
-
     // check form input validity
     if (
       validateEmail(emailValue) ||
@@ -56,11 +55,11 @@ export default function ({ submitted }) {
       emailjs
         .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
         .then(() => {
-          form.reset()
           submitted(true)
         })
         .catch((err) => {
           setErrors({ form: true })
+          console.log(err)
         })
     }
   }
@@ -82,7 +81,6 @@ export default function ({ submitted }) {
             <input
               className="hpinvis"
               type="text"
-              name="name"
               autoComplete="off"
               tabIndex="-1"
             />
@@ -111,7 +109,6 @@ export default function ({ submitted }) {
             <input
               className="hpinvis"
               type="email"
-              name="email"
               autoComplete="off"
               tabIndex="-1"
             />
