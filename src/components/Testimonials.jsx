@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import '../styles/Home.styles.css'
 import TestimonialList from './TestimonialList'
 import TestimonialCarousel from './TestimonialCarousel'
+import TestimonialVideo from './TestimonialVideo'
 
 //TODO: change render based on screen size
 
@@ -18,7 +19,8 @@ export default function () {
   return (
     <>
       <h2 className="text-centered">Here's what customers are saying:</h2>
-      {isDesktop ? <TestimonialList /> : <TestimonialCarousel />}
+      {/* {isDesktop ? <TestimonialList /> : <TestimonialCarousel />} */}
+      <TestimonialVideo />
     </>
   )
 }

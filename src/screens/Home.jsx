@@ -20,7 +20,7 @@ export default function Home() {
       <HomeAdCard showModal={setShowModal} />
       <Testimonials />
       <HomeList />
-      <Footer />
+      <Footer showModal={setShowModal} />
     </>
   )
 }
