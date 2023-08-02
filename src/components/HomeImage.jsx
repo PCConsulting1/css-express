@@ -9,7 +9,11 @@ export default function ({ showModal }) {
       <div className="spacer">
         <h2>Don't miss out on Financial Aid.</h2>
         <p className="text-lg">We're ready to assist you</p>
-        <button onClick={(e) => handleClick(e)}>File with an expert</button>
+        <div className="splatter-wrapper">
+          <button onClick={(e) => handleClick(e)}>
+            FILE WITH AN EXPERT TODAY
+          </button>
+        </div>
       </div>
     </div>
   )

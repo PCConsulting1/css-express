@@ -60,7 +60,48 @@
 }
 .card button {
   margin: 10px;
+  width: 25rem;
+  height: 5rem;
+  font-size: larger;
+  animation: shake 2s infinite;
 }
+
+.card button:hover {
+  animation-play-state: paused;
+}
+
+.footer button {
+  width: 15rem;
+  height: 5rem;
+  font-size: larger;
+  margin-top: 1rem;
+  border: 2px solid white;
+  color: white;
+  transition: box-shadow 0.3s ease;
+  /* Define the initial glow color (adjust as needed) */
+  box-shadow: 0 0 10px #3498db;
+  /* Start the animation */
+  animation: glow-animation 1s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -223,6 +264,32 @@ ol li {
   -moz-background-size: cover;
   -o-background-size: cover;
   width: 100vw;
+}
+
+.welcome-container button {
+  width: 15rem;
+  height: 5rem;
+  font-size: larger;
+  transition: box-shadow 0.3s ease;
+  /* Define the initial glow color (adjust as needed) */
+  box-shadow: 0 0 0px #3498db;
+  /* Start the animation */
+  animation: glow-animation 1s infinite;
+}
+
+@keyframes glow-animation {
+  0% {
+    /* Initial glow radius and color */
+    box-shadow: 0 0 0px 5px #4361ee;
+  }
+  50% {
+    /* Increase the glow radius and adjust the color to make it more intense */
+    box-shadow: 0 0 10px #3498db;
+  }
+  100% {
+    /* Return to the initial glow radius and color */
+    box-shadow: 0 0 0px 5px #4361ee;
+  }
 }
 
 @media (min-width: 481px) {

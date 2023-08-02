@@ -12,7 +12,7 @@ export default function ({ showModal }) {
             Have a dedicated CSS Profile counselor handle everything from start
             to finish
           </p>
-          <button onClick={() => showModal(true)}>Get Started</button>
+          <button onClick={() => showModal(true)}>GET STARTED</button>
         </div>
         <div className="card-image-container">
           <img

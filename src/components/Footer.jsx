@@ -12,7 +12,9 @@ export default function ({ showModal }) {
       </div>
       <div>
         {/* <ContactForm /> */}
-        <button onClick={(e) => handleClick(e)}>File with an expert</button>
+        <button onClick={(e) => handleClick(e)}>
+          FILE WITH AN EXPERT TODAY
+        </button>
       </div>
     </div>
   )
