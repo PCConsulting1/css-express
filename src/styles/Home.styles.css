@@ -277,6 +277,16 @@ ol li {
   animation: glow-animation 1s infinite;
 }
 
+.video-responsive {
+  overflow: hidden;
+
+  position: relative;
+}
+.youtube-video {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
 @keyframes glow-animation {
   0% {
     /* Initial glow radius and color */

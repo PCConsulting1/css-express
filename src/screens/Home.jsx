@@ -4,7 +4,8 @@ import HomeBanner from '../components/HomeBanner'
 import HomeImage from '../components/HomeImage'
 import FormModal from '../components/FormModal'
 import HomeAdCard from '../components/HomeAdCard'
-import Testimonials from '../components/Testimonials'
+// import Testimonials from '../components/Testimonials'
+import TestimonialVideo from '../components/TestimonialVideo'
 import HomeList from '../components/HomeList'
 import Packages from '../components/Packages'
 import Footer from '../components/Footer'
@@ -19,7 +20,8 @@ export default function Home() {
       <HomeBanner />
       <HomeImage showModal={setShowModal} />
       <HomeAdCard showModal={setShowModal} />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <TestimonialVideo />
       <Packages />
       <HomeList />
       <Footer showModal={setShowModal} />

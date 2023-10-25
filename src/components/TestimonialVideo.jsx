@@ -1,14 +1,11 @@
+import YoutubeEmbed from './YoutubeVideo'
 export default function TestimonialVideo() {
   return (
-    <div className="testimonials-container">
-      <video
-        width="640"
-        height="480"
-        controls
-        preload="auto"
-        playsInline
-        src="/Testimonials.mp4"
-      ></video>
-    </div>
+    <>
+      <h2 className="text-centered">Here's what customers are saying:</h2>
+      <div className="testimonials-container">
+        <YoutubeEmbed />
+      </div>
+    </>
   )
 }
